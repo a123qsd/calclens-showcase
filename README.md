@@ -1,6 +1,6 @@
 # CalcLens Showcase
 
-CalcLens is a desktop workbench for inspecting crystals, molecular structures and calculation results. This repository contains the bilingual portfolio, screenshots and application license. Download desktop packages from Releases. The application development repository is private.
+CalcLens is a desktop workbench for inspecting crystals, molecular structures and calculation results. This repository contains the bilingual portfolio, screenshots and application licenses, including the current 0.13.1 terms and the preserved version 1.0 terms. Download desktop packages from Releases. The application development repository is private.
 
 [한국어](https://a123qsd.github.io/calclens-showcase/) · [English](https://a123qsd.github.io/calclens-showcase/en.html) · [Licenses and distribution](https://a123qsd.github.io/calclens-showcase/licenses-en.html) · [Releases](https://github.com/a123qsd/calclens-showcase/releases)
 

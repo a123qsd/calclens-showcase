@@ -10,6 +10,8 @@
 - **고지만 작은 파일로 받기:** [0.11.0 제3자 라이선스·저작권 고지 ZIP](https://github.com/a123qsd/calclens-showcase/releases/download/component-sources-0.11.0/CalcLens-0.11.0-third-party-notices.zip). 기존 대용량 소스 묶음의 고지 61개를 원문 그대로 담았으며, 소스 코드는 포함하지 않습니다. ZIP의 SHA-256은 `df3cab9c2af07737ee003fd7899352b0d233b0917ca69887a10b4992e7446414`입니다.
 - **0.11.1의 별도 Windows 전체 런타임에 포함된 Paramiko 5.1.0:** [0.11.1 보완 소스·라이선스 ZIP](https://github.com/a123qsd/calclens-showcase/releases/download/component-sources-0.11.0/CalcLens-0.11.1-Paramiko-5.1.0-source.zip) · [PyPI 원본](https://pypi.org/project/paramiko/5.1.0/#files). 보완 ZIP의 SHA-256은 `f0ef5b30f78503ab57f9d75a75a9fe8c42dbf70f7d0ad4ab7b5215e8832c1247`, 그 안에 든 원본 `paramiko-5.1.0.tar.gz`는 `239b5f9b2a53006cd54f83cf8495ee742083708ead947882c8dd2786de79f39b`입니다. 위 0.11.0 소스 묶음에는 Paramiko가 들어 있지 않습니다.
 - **0.12.0 Mac의 수정된 Qt Cocoa 플러그인:** [대응 소스, 수정 사항, 빌드 방법과 고지](https://github.com/a123qsd/calclens-showcase/releases/download/v0.12.0/CalcLens-0.12.0-Qt-Cocoa-source.zip). ZIP의 SHA-256은 `29544ebc27cc722169037f72053784b46b53e98deeb17e231a3eaaf5dfe8515f`입니다. 플러그인에는 Qt의 [접근성 수정](https://github.com/qt/qtbase/commit/8148c48deb8e4345bacb797cb75c011df6f797fa)이 적용돼 있습니다.
+- **0.13.0 Mac의 Qt Cocoa 플러그인:** [대응 소스와 고지](https://github.com/a123qsd/calclens-showcase/releases/download/v0.13.0/CalcLens-0.13.0-Qt-Cocoa-source.zip).
+- **0.13.1 Mac의 Qt Cocoa 플러그인:** [대응 소스와 고지](https://github.com/a123qsd/calclens-showcase/releases/download/v0.13.1/CalcLens-0.13.1-Qt-Cocoa-source.zip).
 
 각 묶음은 제3자 자료만 제공합니다. 고지문과 라이선스 전문은 해당 구성요소와 함께 보관해 주세요. 0.11.0 원본 묶음의 NOTICE는 준비 당시 교체 실험이 없었다고 기록합니다. 그 뒤 실시한 0.11.0 Windows·Mac 실험 결과는 아래에서 확인할 수 있습니다. 자료만으로 예전 배포 당시의 전달 방식이나 모든 바이너리의 빌드 일치가 확인되는 것은 아닙니다.
 
@@ -51,6 +53,12 @@ Windows 0.11.0의 원본 ZIP 해시를 확인한 뒤 별도 복사본에서 PySi
 원본 DMG의 SHA-256을 기록된 배포 해시와 대조한 뒤 앱을 별도 디스크에 복사했습니다. 원래 Qt 6.12.0 Cocoa 플러그인 대신 0.12.0에 배포된, Qt 접근성 수정이 적용된 호환 플러그인을 넣고 앱을 로컬 ad-hoc 서명했습니다. 서명 직후 무결성 검사를 통과했고, Apple Silicon의 macOS 27.2에서 앱 프로세스가 16초 동안 유지됐습니다. Qt 로더 기록과 프로세스의 라이브러리 매핑에서 교체된 플러그인이 실제 로드된 것도 확인했습니다. 비교용 원본 복사본 역시 같은 시간 동안 실행됐습니다.
 
 실행 후에는 프레임워크의 FinderInfo 확장 속성 때문에 같은 엄격한 서명 검사가 실패했습니다. 복사본에서 해당 속성을 제거하자 다시 통과했습니다. 이 실험은 플러그인 하나의 로드와 제한된 시작 동작을 보여 주며, 모든 화면의 동작이나 모든 수정 라이브러리의 호환성·서명 유지를 보증하지 않습니다. 원본 DMG는 변경하지 않았습니다.
+
+## Mac 플러그인 재빌드와 실제 로딩
+
+0.12.0과 0.13.0의 공식 Mac DMG를 각 버전에 맞는 설치 환경의 복사본에서 열었습니다. 두 환경에서는 Qt가 플러그인 폴더 안의 `libqcocoa.dylib.calclens-original` 백업을 먼저 선택했습니다. 앱은 열렸지만, Qt 로더와 macOS 로더가 기록한 파일의 SHA-256은 수정 전 원본 `e355b16024485dbacac13ea13a1ce46bca4cf682f8b7b698c557e5960185d636`이었습니다. 패키지에 수정본이 들어 있는 사실과 시작할 때 실제로 선택된 파일은 따로 확인했습니다.
+
+0.13.1은 백업을 Qt의 플러그인 검색 폴더 밖에 보관합니다. 새로 설치한 환경에서는 로더가 수정본을 선택했고 구조 편집과 Gaussian 입력 생성이 통과했습니다. 공개 소스 묶음에서 Qt 6.12.0과 SDK 입력 해시를 확인하고 참조 플러그인을 다시 빌드하자 배포 파일과 같은 SHA-256 `cdd31d9a8e074d6e510a6393cf6c6aed22f5f8244c99f9fce1d8b4efcdd0c75e`가 나왔습니다. 접근성 로그명을 바꾼 소스로도 별도 플러그인을 빌드했습니다. 다른 해시 `bebc83414c6a0f44e07a10aa8c7ac9f103c274cdebd07da36cc761a97517e977`의 파일이 앱에 실제로 로드됐고 편집 검사도 통과했습니다. 참조판과 수정판의 파일 경로를 실행 중인 프로세스의 메모리에서도 확인했습니다. [0.13.1 소스·패치·수정판 빌드 방법](https://github.com/a123qsd/calclens-showcase/releases/download/v0.13.1/CalcLens-0.13.1-Qt-Cocoa-source.zip)
 
 ## 라이선스를 구분한 이유
 

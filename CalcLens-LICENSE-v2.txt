@@ -1,0 +1,171 @@
+CalcLens Free Internal Use License, version 2.0
+For CalcLens 0.13.1
+
+Copyright (c) 2026 a123qsd
+
+Each licensor grants the permissions below only for the material and rights
+that the licensor is authorized to license. Existing copyright and
+attribution notices continue to apply to their respective material.
+
+1. Scope and earlier rights
+
+This license concerns the original CalcLens application code, documentation,
+and examples that a copyright holder or authorized licensor expressly makes
+available under this license in CalcLens 0.13.1 ("Covered Material"). It
+applies only to rights that the person granting this license has authority to
+license. Third-party material is governed as described in section 5.
+
+Nothing in this license withdraws, replaces, limits, or requires you to give
+up any permission you already have under the CalcLens Free Internal Use
+License, version 1.0 ("version 1.0"), another agreement, a third-party
+license, or applicable law. This includes rights granted under version 1.0
+in material previously released under that license and in modifications of
+that material, to the extent covered by that license. Those rights remain
+even if the earlier material also appears unchanged in CalcLens 0.13.1.
+Version 1.0 does not automatically grant rights in material for which no
+permission was previously granted. The complete version 1.0 license and its
+existing copyright notice are included in LICENSE-v1-legacy.txt.
+
+You may choose to exercise the permissions in this license for Covered
+Material. You do not need to accept this license to exercise rights that you
+already have independently of it.
+
+2. Free use and modification
+
+Each licensor grants you a worldwide, non-exclusive, royalty-free permission
+to use, copy, study, modify, and reverse engineer the Covered Material for
+personal use, education, academic research, and the internal activities of a
+school, organization, or business. Internal business use is permitted even
+when the business operates for profit. An organization's employees and
+contractors may exercise these permissions on its behalf for its internal
+activities. You may retain private backups and internally use your modified
+versions. Section 3 addresses sharing copies outside that scope. For an
+organization, copies provided to its employees and contractors solely for its
+internal activities are internal; providing copies to an independent entity
+or other person is external. For an individual, providing copies to another
+person is external.
+
+You may publish and commercially use research, figures, reports, and other
+results produced using the Covered Material. This license claims no ownership
+of your input data or results. If a result contains a copy of Covered
+Material or third-party material, the rights in that included material still
+apply.
+
+You may provide third parties with remote access, without charging for that
+access or use, to the unmodified CalcLens application files contained in an
+Official Package described in section 3. Ordinary application settings,
+user data, and replacement or modification of separately licensed libraries
+as permitted by section 5 do not make the CalcLens application files
+modified for this purpose.
+
+This permission to access a running application does not itself authorize
+sending Covered Material to those third parties as a client download, source
+code, or another copy, or making a modified CalcLens application available
+to them through a hosted service. You may send an unchanged Official Package
+as permitted by section 3. Sections 1 and 5 preserve independently granted
+rights. A paid service is addressed in section 4.
+
+3. Sharing official application packages
+
+You may redistribute an Official Package at no charge. An "Official Package"
+is an executable installer, application archive, or other object-code package
+for CalcLens 0.13.1 that a licensor has expressly published as an official
+application package under this license. Its contents and the package file
+must be unchanged from the official package you received. You must preserve
+any accompanying licenses, copyright notices, third-party notices, and other
+materials that you are required to provide when redistributing it. This
+definition does not limit the rights described in sections 1 and 5.
+
+Except as permitted by this section, another license or agreement, or
+applicable law, this license does not permit you to distribute Covered
+Material to others outside the internal-use scope described in section 2,
+whether in source form, object form, or a modified package. In particular,
+prior written permission from the relevant rights holder is required to
+distribute Covered Material source code or modified versions outside that
+scope, unless you are already entitled to do so under an earlier license,
+another agreement, an applicable third-party license, or applicable law.
+This includes publishing source code or modified versions in a public
+repository. The earlier rights and third-party rights described in sections
+1 and 5 remain available independently of this paragraph.
+
+Recipients of an Official Package receive the permissions in this license
+directly from the licensors to the extent the licensors have authority to
+grant them. This license does not authorize a recipient to remove notices or
+to restrict rights provided by applicable third-party licenses.
+
+4. Paid distribution and hosted services
+
+Except to the extent authorized by an earlier license, another agreement,
+an applicable third-party license, or applicable law, prior written
+permission from the relevant rights holder is required to:
+
+(a) sell, rent, license for a fee, or otherwise charge for copies of Covered
+Material or a modified version;
+(b) charge for a copy of, the right to use, or access to Covered Material
+through a bundle or another product, even when the charge is presented under
+another name; or
+(c) provide third parties with a paid hosted service, API, subscription, or
+other paid service whose offered function includes running or providing
+access to Covered Material or a modified version.
+
+Genuinely free inclusion alongside an unrelated paid product is permitted
+when no part of the consideration is for a copy of, use of, or access to
+the Covered Material, subject to the sharing permissions in section 3.
+Charging for consulting, installation, training, or support is permitted
+when the fee is for that work and is not a disguised charge for copies of,
+access to, or hosted use of the Covered Material.
+
+An internal deployment permitted by section 2 does not become a paid
+service merely because employees receive salaries, contractors are
+compensated for internal work, or the organization earns revenue from
+unrelated activities. A school charging ordinary tuition may likewise use
+the Covered Material internally for teaching. A fee specifically for access
+to the Covered Material is subject to this section.
+
+Contact the repository owner at https://github.com/a123qsd to request
+permission. Public availability or silence does not itself grant permission
+under this section.
+
+5. Third-party material and legal rights
+
+Third-party libraries, data, and other separately licensed components retain
+their own licenses. This license neither replaces their terms nor restricts
+rights they grant. Preserve the notices and fulfill the applicable license
+conditions when distributing those components. This license does not change
+the license for ASE, Qt, PySide, Shiboken, or modifications of those
+components.
+
+In particular, this license does not restrict modifications to or
+replacement of an LGPL library, or reverse engineering of the Covered
+Material for debugging such modifications, as required by the applicable
+LGPL terms. It does not restrict any rights to obtain corresponding source
+or application code, relink, install, execute, or redistribute material where
+an applicable third-party license requires those rights. A legal right that
+exists independently of this license is not restricted by this license.
+
+6. No warranty and limitation of liability
+
+The Covered Material is provided "AS IS", without warranty of any kind,
+express or implied, including merchantability, fitness for a particular
+purpose, noninfringement, scientific accuracy, or suitability for research
+decisions. To the extent permitted by law, the copyright holders and
+contributors shall not be liable for any claim, damages, or other liability
+arising from the Covered Material or its use. You are responsible for
+checking results and suitability for your intended use.
+
+7. Other terms
+
+This license grants only the copyright permissions stated above. It does
+not grant trademark rights or endorsement, and does not limit rights you
+already have under applicable law. If you violate these terms, the
+permissions granted by this license end; they are reinstated when the
+violation is fully cured within 30 days of notice from the relevant copyright
+holder, unless that holder has previously notified you of a violation that
+you failed to cure within that period. Termination under this license does
+not terminate permissions you hold independently under an earlier license,
+a third-party license, or applicable law.
+
+Because this license restricts external redistribution and paid services, it
+is not an OSI-approved open-source license. Do not describe Covered Material
+as open source under this license. This English text governs; explanatory
+summaries do not replace it.
