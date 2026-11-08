@@ -1,10 +1,12 @@
 .nojekyll
 CalcLens-LICENSE.txt
+component-review.md
 PUBLIC-FILES.txt
 README.md
 assets/editor.webp
 assets/gaussian.webp
 assets/structure.webp
+assets/integrated-preview.jpg
 en.html
 index.html
 licenses-en.html
