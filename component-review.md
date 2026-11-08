@@ -2,6 +2,8 @@
 
 검토 기준일: 2026-11-08. 이 문서는 과거 배포 파일에 들어 있던 제3자 라이브러리와 현재 받을 수 있는 소스 자료를 안내합니다. CalcLens 자체의 사용 조건은 [라이선스와 배포 안내](https://a123qsd.github.io/calclens-showcase/licenses.html)에 있습니다. 구성요소마다 원저작자의 라이선스가 별도로 적용됩니다.
 
+보관된 릴리스 기록 13개에 있는 파일 105개를 다시 읽어 기록된 크기와 SHA-256이 모두 일치하는지 확인했습니다. 개발 연혁의 0.1.0과 0.4.0은 별도 배포 자산이 확인되지 않아 바이너리 조사 표에서 제외했습니다. [CalcLens 버전 연혁](https://a123qsd.github.io/calclens-showcase/#history)
+
 ## 소스와 고지 받기
 
 - **0.11.0 기준 Qt 6.12.0, PySide/Shiboken 6.12.0, ASE 3.29.0 및 NSIS 3.13 자료:** [제3자 소스·고지 묶음](https://github.com/a123qsd/calclens-showcase/releases/tag/component-sources-0.11.0). 이 묶음은 0.11.0을 기준으로 만들었으며 초기 버전의 ASE에도 같은 원본이 쓰였습니다. 각 구성요소의 소스, 저작권 고지, LGPL·GPL 전문과 해당 Qt 예외를 포함합니다. 전체 ZIP의 SHA-256은 `fa70e5366cdd49efd255ca57221dae87170bebdf164ac6f71368db383b788175`입니다.
@@ -28,9 +30,11 @@
 
 0.11.0 Windows ZIP에는 CPython 라이선스, VTK 9.7.2의 저작권·라이선스, NumPy 2.5.4와 SciPy 1.18.1의 고지가 들어 있습니다. NumPy와 SciPy는 각각 OpenBLAS DLL도 포함합니다. 두 고지에는 OpenBLAS·LAPACK의 저작권과 GCC Runtime Library Exception이 함께 적혀 있습니다. 해당 고지는 위 0.11.0 제3자 자료의 `notices/`에도 보존했습니다. 웹 화면에 쓰인 React·3Dmol.js 등의 고지와 글꼴 고지도 같은 자료에 포함됩니다. 각 저작권과 예외 문구를 원문 그대로 유지해야 합니다.
 
-두 OpenBLAS DLL의 문자열에서 `gcc-10.3.0/libgfortran`과 `mingw-w64/.../winpthreads` 소스 경로도 확인했습니다. 두 휠의 고지문에는 winpthreads 명칭이 없었습니다. 경로 문자열만으로 실제 포함 코드와 정확한 버전을 확정할 수 없으므로 추가 대조가 필요합니다. 참고할 원본은 [GCC 10.3.0](https://ftp.gnu.org/gnu/gcc/gcc-10.3.0/gcc-10.3.0.tar.xz)과 [winpthreads 고지](https://github.com/mingw-w64/mingw-w64/blob/ae5227f620699c8d532609ae30dc66432b903dab/mingw-w64-libraries/winpthreads/COPYING)입니다. 이 링크가 해당 DLL의 빌드 일치를 보증하지는 않습니다.
+0.11.0 Windows의 두 OpenBLAS DLL을 같은 버전의 공식 Windows x64 휠과 대조했습니다. NumPy 2.5.4의 DLL은 [scipy-openblas64 0.3.34.106.0](https://pypi.org/project/scipy-openblas64/0.3.34.106.0/#files) 공급 휠의 DLL과, SciPy 1.18.1의 DLL은 [scipy-openblas32 0.3.31.22.0](https://pypi.org/project/scipy-openblas32/0.3.31.22.0/#files) 공급 휠의 DLL과 각각 바이트 단위로 같습니다. NumPy·SciPy 휠과 두 공급 휠은 모두 PyPI에 기록된 SHA-256과 일치했습니다. 두 공급 휠 모두 Windows x64용이며 이름의 32와 64는 BLAS 정수 인터페이스를 구분합니다.
 
-검사 범위는 보관 파일과 위에 적은 대조·실험입니다. NumPy/SciPy DLL의 정확한 OpenBLAS·GCC 빌드 설정, 모든 선택 구성요소와 별도 상용 사용권의 존재까지는 확인하지 않았습니다.
+공급 프로젝트의 버전별 빌드 자료에는 각각 OpenBLAS 소스 커밋 [446c436e](https://github.com/OpenMathLib/OpenBLAS/tree/446c436e10450c348169808f1a6b3fae0925c9f7)와 [5ffbf38b](https://github.com/OpenMathLib/OpenBLAS/tree/5ffbf38b41a1fe494d038efcb09cf22f4d527c22)가 지정돼 있고, Windows용 패치와 빌드 절차는 [64 자료](https://github.com/MacPython/openblas-libs/tree/v0.3.34.106.0)와 [32 자료](https://github.com/MacPython/openblas-libs/tree/v0.3.31.22.0)에 있습니다. 이는 공급 프로젝트의 해당 버전 태그가 지정한 소스 참조이며, 여기서 직접 재빌드해 동일한 DLL을 만들었다는 뜻은 아닙니다.
+
+두 DLL의 문자열에는 `gcc-10.3.0/libgfortran`과 `mingw-w64/.../winpthreads` 소스 경로가 있습니다. 두 휠 고지문에는 winpthreads 명칭이 없었습니다. 경로 문자열만으로 실제 포함 코드와 정확한 버전을 확정할 수는 없습니다. 참고 자료는 [GCC 10.3.0](https://ftp.gnu.org/gnu/gcc/gcc-10.3.0/gcc-10.3.0.tar.xz)과 [winpthreads 고지](https://github.com/mingw-w64/mingw-w64/blob/ae5227f620699c8d532609ae30dc66432b903dab/mingw-w64-libraries/winpthreads/COPYING)입니다. 정확한 GCC 빌드 설정, 선택 구성요소 전체와 별도 상용 사용권의 존재는 확인하지 않았습니다.
 
 ## 0.8.0 Windows 수정 ASE 재빌드 실험
 
