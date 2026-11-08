@@ -1,8 +1,22 @@
-# CalcLens 0.1.1–0.12.0 제3자 구성요소 검토
+# CalcLens 제3자 구성요소와 Qt 배포 자료 검토
 
 검토 기준일: 2026-11-08. 이 문서는 과거 배포 파일에 들어 있던 제3자 라이브러리와 현재 받을 수 있는 소스 자료를 안내합니다. CalcLens 자체의 사용 조건은 [라이선스와 배포 안내](https://a123qsd.github.io/calclens-showcase/licenses.html)에 있습니다. 구성요소마다 원저작자의 라이선스가 별도로 적용됩니다.
 
 보관된 릴리스 기록 13개에 있는 파일 105개를 다시 읽어 기록된 크기와 SHA-256이 모두 일치하는지 확인했습니다. 개발 연혁의 0.1.0과 0.4.0은 별도 배포 자산이 확인되지 않아 바이너리 조사 표에서 제외했습니다. [CalcLens 버전 연혁](https://a123qsd.github.io/calclens-showcase/#history)
+
+## Qt 배포 자료의 기술 검토 결과 · 2026-11-08
+
+Windows 0.11.0을 기준으로 공개된 Qt·PySide/Shiboken 소스, 빌드 파일, 라이선스 전문과 교체 권리를 확인했습니다. 이 범위에서 더 제공해야 할 소스·빌드 자료의 누락이나 앱 약관의 교체 권리 제한은 발견하지 못했습니다. 현재 Mac 0.13.1 Cocoa 소스 묶음의 빌드·수정·교체 안내도 확인했습니다.
+
+원본 Windows 0.11.0을 한국어와 영어로 실행해 조사 대상 Qt DLL·플러그인 9개의 실제 로드를 기록했습니다. 3D 렌더링, 그림 내보내기, Gaussian 작업공간과 프로젝트 재열기 동안 대상 9개는 로드되지 않았습니다. 별도 대조 시험에서는 9개를 모두 로드·해제한 기록이 남았습니다. 원본 파일 9,053개는 변경되지 않았습니다.
+
+이 기술 검토 결과로 해당 Qt 자료의 미확인 상태를 갱신합니다. 전체 과거 배포의 법률상 적합 판정이나 다른 버전·모든 사용자 동작에 대한 보증은 아닙니다. [검사 결과와 소스 대조 기록](qt-review-2026-11-08.json)
+
+### English summary
+
+The 2026-11-08 technical review checked the published Qt and PySide/Shiboken source, build files, license texts and replacement rights for the Windows 0.11.0 reference package. It identified no additional necessary source or build material that was missing, or application terms restricting library replacement. The current Mac 0.13.1 Cocoa source kit also contains build, modification and replacement instructions.
+
+In Korean and English runs of the original Windows 0.11.0 launcher, none of the nine target Qt DLLs and plugins loaded during 3D rendering, figure export, the Gaussian workspace or project reopening. A separate control captured all nine being deliberately loaded and unloaded. All 9,053 original payload files remained unchanged. The findings are limited to the named package and tested scenarios; they are not a legal determination covering every historical distribution. [Test results and source concordance](qt-review-2026-11-08.json)
 
 ## 소스와 고지 받기
 
@@ -13,20 +27,20 @@
 - **0.13.0 Mac의 Qt Cocoa 플러그인:** [대응 소스와 고지](https://github.com/a123qsd/calclens-showcase/releases/download/v0.13.0/CalcLens-0.13.0-Qt-Cocoa-source.zip).
 - **0.13.1 Mac의 Qt Cocoa 플러그인:** [대응 소스와 고지](https://github.com/a123qsd/calclens-showcase/releases/download/v0.13.1/CalcLens-0.13.1-Qt-Cocoa-source.zip).
 
-각 묶음은 제3자 자료만 제공합니다. 고지문과 라이선스 전문은 해당 구성요소와 함께 보관해 주세요. 0.11.0 원본 묶음의 NOTICE는 준비 당시 교체 실험이 없었다고 기록합니다. 그 뒤 실시한 0.11.0 Windows·Mac 실험 결과는 아래에서 확인할 수 있습니다. 자료만으로 예전 배포 당시의 전달 방식이나 모든 바이너리의 빌드 일치가 확인되는 것은 아닙니다.
+각 묶음은 제3자 자료만 제공합니다. 고지문과 라이선스 전문은 해당 구성요소와 함께 보관해 주세요. 0.11.0 원본 ZIP의 NOTICE와 MANIFEST는 작성 당시의 상태를 보존합니다. 이후 확인한 소스 대조, 라이브러리 교체와 Windows DLL 로드 결과는 이 문서와 별도 검사 기록에 반영했습니다. 원본 묶음의 고지를 현재의 미해결 항목 목록으로 해석하지 마세요.
 
 ## 버전별로 확인한 내용
 
-| 버전과 조사한 파일 | 확인한 내용 | 남은 확인 |
+| 버전과 조사한 파일 | 확인한 내용 | 검증 범위 |
 | --- | --- | --- |
 | **0.1.1·0.2.0** | 보관된 한국어·영어 앱/자료 ZIP의 목록을 확인했습니다. 이 ZIP에서는 Qt·PySide 또는 ASE 런타임을 식별하지 못했습니다. | 외부에 별도 설치된 패키지나 목록에 없는 파일까지 조사한 결과는 아닙니다. |
 | **0.3.0, 0.5.0–0.8.0 Windows** | 보관된 지원 ZIP 여섯 개(0.7.0 일반·legacy 포함)에 ASE 3.29.0 소스가 있으며, 모두 공식 PyPI 원본 해시와 일치합니다. 지원 자료에는 재빌드 안내도 있습니다. 조사한 영어 실행 파일 여섯 개에는 ASE 모듈이 각각 202개씩 PyInstaller의 `PYZ.pyz`에 묶여 있었습니다. | 0.8.0의 수정 ASE 재빌드 실험은 아래와 같습니다. 단순한 폴더 복사로 원래 EXE의 ASE가 교체된다고 확인한 것은 아닙니다. 한국어 실행 파일 전체를 같은 수준으로 분석한 것은 아닙니다. |
-| **0.9.0–0.11.0 Windows** | 0.9.0 단일 실행 파일과 0.9.1·0.10.0·0.11.0 폴더 ZIP에서 Qt/PySide 6.12.0과 ASE 3.29.0의 파일 또는 메타데이터를 확인했습니다. 여섯 Qt DLL은 네 버전 간 각각 SHA-256이 같습니다. 이 중 Lottie와 Quick Timeline은 GPLv3 전용 또는 별도 상용 라이선스 대상이며, QmlCompiler는 해당 소스 파일의 GPLv3와 Qt 예외를 확인했습니다. | 0.11.0의 Qt 대체 실행 실험은 아래와 같습니다. 여섯 파일의 동일성이 모든 파일의 원본 일치를 뜻하지는 않습니다. GPL 구성요소의 존재만으로 CalcLens 앱 전체가 GPL 결합 저작물인지 판단할 수 없습니다. |
+| **0.9.0–0.11.0 Windows** | 0.9.0 단일 실행 파일과 0.9.1·0.10.0·0.11.0 폴더 ZIP에서 Qt/PySide 6.12.0과 ASE 3.29.0의 파일 또는 메타데이터를 확인했습니다. 여섯 Qt DLL은 네 버전 간 각각 SHA-256이 같습니다. 이 중 Lottie와 Quick Timeline은 GPLv3 전용 또는 별도 상용 라이선스 대상이며, QmlCompiler는 해당 소스 파일의 GPLv3와 Qt 예외를 확인했습니다. | 0.11.0에서는 아래의 Qt 대체 실행, 공개 소스 대조와 DLL 로드 기록을 확인했습니다. 대상 9개는 시험한 동작에서 로드되지 않았습니다. 이 결과를 다른 버전이나 모든 동작으로 일반화하지 않습니다. |
 | **0.9.0–0.11.0 Mac** | 보관된 네 개 DMG에서 Qt/PySide 6.12.0과 ASE 3.29.0을 확인했습니다. Qt 관련 고지 경로에서 LGPL 전문이 확인되지 않아 위 소스 묶음에 전문을 보완했습니다. 0.11.0 복사본의 Cocoa 플러그인 교체 실험은 아래와 같습니다. | 0.9.0–0.10.0과 0.11.0의 다른 라이브러리 전체를 교체해 실행한 것은 아닙니다. |
 | **0.11.1 Windows** | 별도 전체 런타임 검토본에서는 앞의 여섯 Qt DLL이 0.11.0과 각각 동일하고 Paramiko 5.1.0도 포함돼 있습니다. Paramiko Python 파일 42개는 공식 소스의 같은 파일 42개와 모두 일치했습니다. 공개 경량 ZIP은 Python·Qt를 함께 싣는 이 전체 런타임과 다른 파일입니다. | 전체 런타임 검토본이 과거 누구에게 전달됐는지는 확인하지 않았습니다. 공개 경량 ZIP은 설치 시 받는 패키지의 조건도 별도로 적용됩니다. |
 | **0.12.0 Mac 공개 DMG** | DMG에 수정된 Qt Cocoa 플러그인 하나를 포함하며, 해당 소스·패치·빌드 지침과 고지를 위의 별도 ZIP으로 제공합니다. | 다른 설치 환경과 모든 라이브러리의 수정·교체까지 이 사실만으로 확인되지는 않습니다. |
 
-0.9.0–0.11.0 Windows 패키지에서 PySide/Shiboken의 배포 메타데이터에는 LGPL/GPL 선택지가 표시되지만, 해당 `dist-info/licenses` 폴더에 남아 있는 파일은 상용 라이선스 참조뿐이었습니다. 상용 라이선스 참조 파일은 상용 사용권을 취득했다는 증거가 아닙니다. 전체 LGPL/GPL 본문과 소스는 위의 제3자 자료에서 받을 수 있습니다. 0.11.0 Windows에서는 공식 ASE·PySide·Shiboken 휠과 실제 파일을 대조했습니다. 그 대조는 일치한 파일의 출처를 뒷받침하며, Qt의 모든 네이티브 빌드 설정까지 증명하지는 않습니다.
+0.9.0–0.11.0 Windows 패키지에서 PySide/Shiboken의 배포 메타데이터에는 LGPL/GPL 선택지가 표시되지만, 해당 `dist-info/licenses` 폴더에 남아 있는 파일은 상용 라이선스 참조뿐이었습니다. 상용 라이선스 참조 파일은 상용 사용권을 취득했다는 증거가 아닙니다. 전체 LGPL/GPL 본문과 소스는 위의 제3자 자료에서 받을 수 있습니다. 0.11.0 Windows에서는 공식 ASE·PySide·Shiboken 휠과 실제 파일을 대조했고, 공개된 원본 소스의 구성과 빌드 자료도 추가 확인했습니다. Qt의 소스·빌드 자료에서 필요한 파일의 구체적인 누락은 발견하지 못했습니다. 동일한 바이트의 바이너리를 다시 만드는 시험까지 수행한 것은 아닙니다.
 
 ## 다른 구성요소의 고지
 
@@ -43,6 +57,25 @@
 보관된 0.8.0 Windows 지원 ZIP의 해시를 확인하고 동봉된 ASE 3.29.0 소스에 실행 여부를 식별하는 무해한 표식을 추가했습니다. 안내문에 따라 수정한 ASE를 설치하고 동봉된 앱 빌드 자료로 영어 단일 EXE를 다시 만들었습니다. 호스팅 Windows에서 재빌드 EXE의 자체 검사를 실행했을 때 수정된 ASE 표식이 나타났고, 그래핀 구조와 MoS₂ 축 검사도 통과했습니다.
 
 이 결과는 영어 단일 EXE를 새로 빌드한 경우에 관한 것입니다. 원래 배포된 EXE의 내부 라이브러리를 직접 교체하거나 한국어판·다른 버전·브라우저 화면까지 시험한 것은 아닙니다.
+
+## 공개 Qt 소스와 빌드 자료 대조
+
+공개된 `qt-everywhere-src-6.12.0.tar.xz`에는 해당 배포본의 Qt 모듈 소스와 configure·CMake·MSVC 설정 및 빌드 문서가 들어 있습니다. `pyside-setup-everywhere-src-6.12.0.tar.xz`에는 PySide, libshiboken, Shiboken 생성기, 타입시스템과 플랫폼별 빌드·설치 스크립트가 포함됩니다. PySide의 `dependencies.yaml`이 지정한 Qt 라이브러리·문서 저장소 19개의 커밋은 Qt 소스 묶음의 `.tag` 값과 모두 일치했습니다.
+
+원본 Windows Qt의 버전·ABI 정보는 Qt 6.12.0 동적 릴리스 빌드를 가리키며, 공식 휠 파일 대조와 소스 구성 대조가 서로 일치합니다. ASE의 설치된 Python 파일 1,219개도 공개된 3.29.0 소스와 모두 같았습니다. 정확한 과거 네이티브 빌드 명령이나 동일 바이트 재빌드를 복원하지 못했다는 사실만으로 필수 소스 누락이라고 판단하지 않았습니다.
+
+## Windows 0.11.0의 실제 Qt DLL 로드
+
+원본 ZIP의 SHA-256은 `74042e760b9d758ad8c5e4e53d4447c62751a5eb8d801b51841aa009bc69ab80`입니다. Windows의 프로세스·DLL 로드 이벤트로 원본 실행기와 그 Python 자식 프로세스를 기록했습니다. 한국어와 영어 모두 실제 QtCore·QtGui·QtWidgets·Windows 플랫폼 플러그인을 로드해 작업 검사를 통과했습니다.
+
+| 실행 | DLL 로드 이벤트 | 고유 DLL 이름 | 조사 대상 9개 로드 | 경로 미확인 |
+| --- | ---: | ---: | ---: | ---: |
+| 영어 | 335 | 290 | 0 | 0 |
+| 한국어 | 337 | 290 | 0 | 0 |
+
+대상은 Lottie 계열 DLL 3개, Timeline 계열 DLL 2개, Qt GPL 예외가 붙은 QmlCompiler DLL 1개와 관련 플러그인 3개입니다. 별도 대조 실행에서 9개의 로드와 해제를 모두 기록해 일시적인 로드도 관찰할 수 있음을 확인했습니다. 대조 실행은 앱의 사용으로 집계하지 않습니다.
+
+검사는 호스팅 Windows의 소프트웨어 OpenGL에서 기본 화면, 3D, 구조·전자밀도 그림 내보내기, Gaussian 입력 작성과 프로젝트 재열기를 다뤘습니다. 모든 사용자 조작·외부 플러그인·실물 GPU나 다른 버전을 시험한 결과는 아닙니다. [파일별 식별값과 결과](qt-review-2026-11-08.json)
 
 ## 0.11.0 Windows 라이브러리 대체 실험
 
@@ -66,4 +99,4 @@ Qt의 LGPL 대상 라이브러리, GPL 대상 모듈, GPL과 별도 예외가 �
 
 검토 기준과 원문: [Qt 라이선스 분류](https://doc.qt.io/qt-6/licensing.html) · [Qt의 LGPL 배포 안내](https://www.qt.io/development/open-source-lgpl-obligations) · [LGPLv3 전문](https://doc.qt.io/qt-6/lgpl.html) · [ASE 라이선스](https://docs.ase-lib.org/development/licenseinfo.html) · [NSIS 라이선스](https://nsis.sourceforge.io/License).
 
-이 문서는 확인한 파일과 실험의 범위를 기록한 자료이며, 전체 과거 배포에 대한 법률상 적합 판정은 아닙니다. 과거 수령자에게 소스와 고지가 어떻게 전달됐는지, 구성요소별 대응 소스 및 교체 방법이 충분한지는 확인된 사실을 벗어나 추정하지 않습니다.
+이번 Qt 기술 검토는 위에 명시한 버전의 공개 소스·빌드 자료, 라이선스 전문과 라이브러리 교체 권리 및 실행 기록을 확인했습니다. 그 범위에서 추가 필수 누락은 발견하지 못했습니다. 과거 수령자별 전달 사실, 다른 구성요소와 전체 과거 배포의 법률상 적합 여부는 이 기술 검토의 결론에 포함되지 않습니다.

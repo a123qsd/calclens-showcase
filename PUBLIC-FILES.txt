@@ -14,3 +14,4 @@ index.html
 licenses-en.html
 licenses.html
 site.css
+qt-review-2026-11-08.json

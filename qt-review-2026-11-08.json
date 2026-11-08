@@ -1,0 +1,424 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-08",
+  "review_result": "No additional required source or build material, or application restriction on library replacement, was identified in the reviewed Qt materials.",
+  "scope": {
+    "historical_reference": "Windows0.11.0 Qt6.12.0/PySide6/Shiboken6",
+    "current_mac_materials": "Mac0.13.1 QtCocoa source,patch,build and replacement instructions",
+    "limits": [
+      "Named packages and tested scenarios only;other historical versions and all user interactions were not tested.",
+      "This technical review is not a legal determination for all historical distribution transactions."
+    ]
+  },
+  "public_materials": {
+    "release": "https://github.com/a123qsd/calclens-showcase/releases/tag/component-sources-0.11.0",
+    "source_bundle_sha256": "fa70e5366cdd49efd255ca57221dae87170bebdf164ac6f71368db383b788175",
+    "notices_zip_sha256": "df3cab9c2af07737ee003fd7899352b0d233b0917ca69887a10b4992e7446414",
+    "anonymous_access_http_status": 200,
+    "notice_files": 61,
+    "full_license_texts": [
+      "GPL-2.0",
+      "GPL-3.0",
+      "LGPL-2.1",
+      "LGPL-3.0",
+      "Qt-GPL-exception-1.0"
+    ],
+    "current_mac_source_kit_sha256": "678cf0a0732e0cc8f4ce513a2fec13bb68aa513d1e103a9915c34e6ca9d70882"
+  },
+  "source_concordance": {
+    "schema_version": 1,
+    "review_date": "2026-11-08",
+    "scope": {
+      "application_release": "CalcLens 0.11.0",
+      "platform": "Windows x64",
+      "components": [
+        "Qt 6.12.0",
+        "PySide6 6.12.0",
+        "Shiboken6 6.12.0"
+      ],
+      "subject": "Public upstream source correspondence and source/build-material completeness"
+    },
+    "assessment": {
+      "result": "Source and build materials present for the identified libraries",
+      "statement": "The supplied release archives contain the identified library sources and their compilation and packaging scripts. No specific necessary library source, local patch, or compilation script missing from the bundle was identified in this bounded review.",
+      "does_not_establish": [
+        "Overall license compliance",
+        "Successful compilation or replacement of the historical libraries",
+        "Byte-identical reproduction of native binaries",
+        "The same binary correspondence for macOS or other CalcLens releases"
+      ]
+    },
+    "archives": {
+      "public_source_bundle": {
+        "filename": "CalcLens-0.11.0-third-party-source-materials.zip",
+        "sha256": "fa70e5366cdd49efd255ca57221dae87170bebdf164ac6f71368db383b788175"
+      },
+      "qt_source": {
+        "bundle_member": "sources/qt-everywhere-src-6.12.0.tar.xz",
+        "sha256": "98ff4f44bac6ec3e1e62ee2a4316ae0e3d15badb015d753cc0268a20db52f165",
+        "archive_root": "qt-everywhere-src-6.12.0",
+        "member_count": 138634
+      },
+      "pyside_shiboken_source": {
+        "bundle_member": "sources/pyside-setup-everywhere-src-6.12.0.tar.xz",
+        "sha256": "099c1a597cf33c1b000e11cf68a0b82d216fb802bf81726efc720394f10c7751",
+        "archive_root": "pyside-setup-everywhere-src-6.12.0",
+        "member_count": 5705
+      },
+      "historical_windows_distribution": {
+        "filename": "CalcLens-0.11.0-Windows-x64-folder.zip",
+        "sha256": "74042e760b9d758ad8c5e4e53d4447c62751a5eb8d801b51841aa009bc69ab80"
+      }
+    },
+    "official_wheel_bridge": {
+      "basis": "Historical Windows PySide6 and Shiboken6 package files were verified against official PyPI wheel contents without differing files.",
+      "pyside_comparison": {
+        "matching_files": 2481,
+        "differing_files": 0,
+        "official_wheel_files_absent_from_shipped_zip": 2,
+        "absent_paths": [
+          "PySide6/support/__pycache__/__init__.cpython-314.pyc",
+          "PySide6/support/__pycache__/deprecated.cpython-314.pyc"
+        ],
+        "absent_file_type": "CPython3.14 bytecode caches;historical runtime uses CPython3.13"
+      },
+      "wheel_metadata": {
+        "versions": "6.12.0",
+        "tag": "cp310-abi3-win_amd64",
+        "generator": "setuptools (78.1.0)",
+        "archive_members": [
+          "CalcLens-0.11.0-Windows-x64/runtime/Lib/site-packages/pyside6_essentials-6.12.0.dist-info/WHEEL",
+          "CalcLens-0.11.0-Windows-x64/runtime/Lib/site-packages/shiboken6-6.12.0.dist-info/WHEEL"
+        ]
+      },
+      "package_build_metadata": {
+        "pyside_build_date": "2026-10-05T13:28:34+00:00",
+        "shiboken_build_date": "2026-10-05T13:28:25+00:00",
+        "archive_members": [
+          "CalcLens-0.11.0-Windows-x64/runtime/Lib/site-packages/PySide6/_config.py",
+          "CalcLens-0.11.0-Windows-x64/runtime/Lib/site-packages/shiboken6/_config.py"
+        ],
+        "commit_fingerprint_present": false
+      },
+      "qt_core_binary": {
+        "archive_member": "CalcLens-0.11.0-Windows-x64/runtime/Lib/site-packages/PySide6/Qt6Core.dll",
+        "sha256": "f57ed38afd95d0306cca9d88d997f639f70c7628a4f1f064eae291d579487121",
+        "embedded_build_description": "Qt 6.12.0 (x86_64-little_endian-llp64 shared (dynamic) release build; by MSVC 2022)"
+      },
+      "interpretation": "The official-wheel comparison and embedded metadata connect the distributed library files to the upstream 6.12.0 package release. They do not independently record every native compiler option or an exact native source commit."
+    },
+    "qt_reference_concordance": {
+      "dependency_manifest": "pyside-setup-everywhere-src-6.12.0/dependencies.yaml",
+      "dependency_manifest_sha256": "bae4b9d9902ccec365b404e96ce02385af1f2a7fbada4ccafc97d6ea049fceef",
+      "method": "Compared each Qt source repository reference in the PySide dependency manifest with the corresponding module .tag value in the supplied Qt source archive.",
+      "matching_source_repositories": 19,
+      "mismatching_source_repositories": 0,
+      "matches": [
+        {
+          "repository": "qt3d",
+          "dependency_ref": "ccb75d7928dac2656f407fb78ac30b9965ed7609",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qt3d/.tag",
+          "source_tag_value": "ccb75d7928dac2656f407fb78ac30b9965ed7609"
+        },
+        {
+          "repository": "qt5compat",
+          "dependency_ref": "9c2a1b4c8298c750f8632e2fd19f7a1a539c5f09",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qt5compat/.tag",
+          "source_tag_value": "9c2a1b4c8298c750f8632e2fd19f7a1a539c5f09"
+        },
+        {
+          "repository": "qtcanvaspainter",
+          "dependency_ref": "ab0866ae00c50cfc959b7a82cdfe643a7e5c2f3e",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtcanvaspainter/.tag",
+          "source_tag_value": "ab0866ae00c50cfc959b7a82cdfe643a7e5c2f3e"
+        },
+        {
+          "repository": "qtconnectivity",
+          "dependency_ref": "2340c1f3ced364314228d8f64a86e8c7d32717f7",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtconnectivity/.tag",
+          "source_tag_value": "2340c1f3ced364314228d8f64a86e8c7d32717f7"
+        },
+        {
+          "repository": "qtdatavis3d",
+          "dependency_ref": "f0edfedb1a770f6389d26ad6f2769d5819391360",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtdatavis3d/.tag",
+          "source_tag_value": "f0edfedb1a770f6389d26ad6f2769d5819391360"
+        },
+        {
+          "repository": "qtdoc",
+          "dependency_ref": "0c98a846e11c56b0576f98cf8497345ae4adec40",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtdoc/.tag",
+          "source_tag_value": "0c98a846e11c56b0576f98cf8497345ae4adec40"
+        },
+        {
+          "repository": "qtgrpc",
+          "dependency_ref": "743a5066f9072e34835a193e045df233a1762e1c",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtgrpc/.tag",
+          "source_tag_value": "743a5066f9072e34835a193e045df233a1762e1c"
+        },
+        {
+          "repository": "qtlottie",
+          "dependency_ref": "6187542f2e7cd69477d1bf45697135c0f78417f4",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtlottie/.tag",
+          "source_tag_value": "6187542f2e7cd69477d1bf45697135c0f78417f4"
+        },
+        {
+          "repository": "qtnetworkauth",
+          "dependency_ref": "d38b832b9b19b0684f6b3539788d610a76ccb99b",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtnetworkauth/.tag",
+          "source_tag_value": "d38b832b9b19b0684f6b3539788d610a76ccb99b"
+        },
+        {
+          "repository": "qtopenapi",
+          "dependency_ref": "c46e62154611707265969a320d3b066db41c0585",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtopenapi/.tag",
+          "source_tag_value": "c46e62154611707265969a320d3b066db41c0585"
+        },
+        {
+          "repository": "qtquickeffectmaker",
+          "dependency_ref": "52a7a47cd549bbb8b128265c7f1d91e77b935eb6",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtquickeffectmaker/.tag",
+          "source_tag_value": "52a7a47cd549bbb8b128265c7f1d91e77b935eb6"
+        },
+        {
+          "repository": "qtremoteobjects",
+          "dependency_ref": "5add069a1b80a345690b911b9c55826a21ca251c",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtremoteobjects/.tag",
+          "source_tag_value": "5add069a1b80a345690b911b9c55826a21ca251c"
+        },
+        {
+          "repository": "qtscxml",
+          "dependency_ref": "0b5ce59845cc964efed91b59ecade97e81c30c66",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtscxml/.tag",
+          "source_tag_value": "0b5ce59845cc964efed91b59ecade97e81c30c66"
+        },
+        {
+          "repository": "qtserialbus",
+          "dependency_ref": "7e730085399effee86f0fdfa9e6cc650b5a09921",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtserialbus/.tag",
+          "source_tag_value": "7e730085399effee86f0fdfa9e6cc650b5a09921"
+        },
+        {
+          "repository": "qtspeech",
+          "dependency_ref": "332f8a148bf01739140c3a00dd54f3ed98f3b546",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtspeech/.tag",
+          "source_tag_value": "332f8a148bf01739140c3a00dd54f3ed98f3b546"
+        },
+        {
+          "repository": "qttranslations",
+          "dependency_ref": "2811457ceff8f0c24a1c4d14f947a283a17239d0",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qttranslations/.tag",
+          "source_tag_value": "2811457ceff8f0c24a1c4d14f947a283a17239d0"
+        },
+        {
+          "repository": "qtvirtualkeyboard",
+          "dependency_ref": "934b432b13cae5c64357a5e98547280bd191f806",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtvirtualkeyboard/.tag",
+          "source_tag_value": "934b432b13cae5c64357a5e98547280bd191f806"
+        },
+        {
+          "repository": "qtwayland",
+          "dependency_ref": "c4f85cd060e3e80a7d71829defac9cf5a40e8ffa",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtwayland/.tag",
+          "source_tag_value": "c4f85cd060e3e80a7d71829defac9cf5a40e8ffa"
+        },
+        {
+          "repository": "qtwebview",
+          "dependency_ref": "5774c23849cdad2bcdf71ad8c8bd6946dcae38f0",
+          "source_tag_path": "qt-everywhere-src-6.12.0/qtwebview/.tag",
+          "source_tag_value": "5774c23849cdad2bcdf71ad8c8bd6946dcae38f0"
+        }
+      ],
+      "quality_assurance_reference": {
+        "repository": "qtqa",
+        "dependency_ref": "35fa4c3c83cf541aeb62b2f06c67db8614feba84",
+        "included_in_qt_source_archive": false,
+        "observed_reference_paths": [
+          "pyside-setup-everywhere-src-6.12.0/dependencies.yaml",
+          "pyside-setup-everywhere-src-6.12.0/tools/license_check.py",
+          "pyside-setup-everywhere-src-6.12.0/sources/pyside6/doc/developer/extras.rst"
+        ],
+        "interpretation": "The additional references concern developer and license quality-assurance checks. No requirement for qtqa in recipient library compilation was identified; its absence is not treated as a demonstrated missing library-build input."
+      }
+    },
+    "additional_shipped_module_revisions": [
+      {
+        "source_tag_path": "qt-everywhere-src-6.12.0/qtbase/.tag",
+        "source_tag_value": "025bdad181de241e81bf853c8a2d7bf3d19261a9"
+      },
+      {
+        "source_tag_path": "qt-everywhere-src-6.12.0/qtdeclarative/.tag",
+        "source_tag_value": "98324181f2eebf01e806603a01829a40b8683631"
+      },
+      {
+        "source_tag_path": "qt-everywhere-src-6.12.0/qttools/.tag",
+        "source_tag_value": "613a6fbf0a7998010ab2fda260b64066d66a021d"
+      },
+      {
+        "source_tag_path": "qt-everywhere-src-6.12.0/qtquicktimeline/.tag",
+        "source_tag_value": "645ba346fd8175aa0572d66c917862f8a7c4a966"
+      },
+      {
+        "source_tag_path": "qt-everywhere-src-6.12.0/qtsvg/.tag",
+        "source_tag_value": "883a58532078d003cefef0a549bfe9f885ce41f5"
+      }
+    ],
+    "critical_source_and_build_material": {
+      "qt_archive_paths": [
+        "qt-everywhere-src-6.12.0/README.md",
+        "qt-everywhere-src-6.12.0/CMakeLists.txt",
+        "qt-everywhere-src-6.12.0/configure",
+        "qt-everywhere-src-6.12.0/configure.bat",
+        "qt-everywhere-src-6.12.0/qtbase/.cmake.conf",
+        "qt-everywhere-src-6.12.0/qtbase/configure",
+        "qt-everywhere-src-6.12.0/qtbase/configure.bat",
+        "qt-everywhere-src-6.12.0/qtbase/configure.cmake",
+        "qt-everywhere-src-6.12.0/qtbase/config_help.txt",
+        "qt-everywhere-src-6.12.0/qtbase/cmake/QtProcessConfigureArgs.cmake",
+        "qt-everywhere-src-6.12.0/qtbase/cmake/QtBuildRepoHelpers.cmake",
+        "qt-everywhere-src-6.12.0/qtbase/cmake/QtAutoDetectHelpers.cmake",
+        "qt-everywhere-src-6.12.0/qtbase/mkspecs/win32-msvc/qmake.conf",
+        "qt-everywhere-src-6.12.0/qtdoc/doc/src/platforms/windows.qdoc"
+      ],
+      "pyside_shiboken_archive_paths": [
+        "pyside-setup-everywhere-src-6.12.0/README.md",
+        "pyside-setup-everywhere-src-6.12.0/setup.py",
+        "pyside-setup-everywhere-src-6.12.0/CMakeLists.txt",
+        "pyside-setup-everywhere-src-6.12.0/requirements.txt",
+        "pyside-setup-everywhere-src-6.12.0/create_wheels.py",
+        "pyside-setup-everywhere-src-6.12.0/build_scripts/options.py",
+        "pyside-setup-everywhere-src-6.12.0/build_scripts/platforms/windows_desktop.py",
+        "pyside-setup-everywhere-src-6.12.0/coin_build_instructions.py",
+        "pyside-setup-everywhere-src-6.12.0/coin/instructions_utils.py",
+        "pyside-setup-everywhere-src-6.12.0/coin/instructions/execute_desktop_instructions.yaml",
+        "pyside-setup-everywhere-src-6.12.0/sources/pyside6/CMakeLists.txt",
+        "pyside-setup-everywhere-src-6.12.0/sources/pyside6/.cmake.conf",
+        "pyside-setup-everywhere-src-6.12.0/sources/pyside6/PySide6/_config.py.in",
+        "pyside-setup-everywhere-src-6.12.0/sources/shiboken6/CMakeLists.txt",
+        "pyside-setup-everywhere-src-6.12.0/sources/shiboken6/.cmake.conf",
+        "pyside-setup-everywhere-src-6.12.0/sources/shiboken6/shibokenmodule/_config.py.in"
+      ],
+      "pyside_readme_build_commands": [
+        "python setup.py build",
+        "python setup.py install"
+      ],
+      "pyside_readme_build_options": [
+        "--qtpaths",
+        "--cmake",
+        "--build-type",
+        "--shiboken-config-dir",
+        "--limited-api",
+        "--module-subset"
+      ]
+    },
+    "verification_limits": [
+      "Native libraries were not rebuilt during this review.",
+      "The exact historical Qt configure command and complete native commit fingerprint were not recovered.",
+      "No specific missing necessary source or build input follows solely from these forensic limits.",
+      "Runtime execution and replacement of modified libraries require separate verification."
+    ]
+  },
+  "windows_runtime": {
+    "application_version": "0.11.0",
+    "qt_version": "6.12.0",
+    "original_archive_sha256": "74042e760b9d758ad8c5e4e53d4447c62751a5eb8d801b51841aa009bc69ab80",
+    "platform": "Hosted Windows x64 with software OpenGL",
+    "method": "Windows process and DLL load/unload debug events for the original launcher and its descendants",
+    "application_memory_modified_by_diagnostic": false,
+    "scenarios": [
+      "Korean and English native desktop",
+      "VTK3D rendering",
+      "Structure and density figure export",
+      "Gaussian workspace and input generation",
+      "Project reopening"
+    ],
+    "results": [
+      {
+        "language": "en",
+        "status": "complete",
+        "dll_load_events": 335,
+        "unique_dll_names": 290,
+        "target_loads": 0,
+        "unresolved_images": 0,
+        "exit_codes": [
+          0,
+          0
+        ],
+        "process_images": [
+          "CalcLens.exe",
+          "pythonw.exe"
+        ],
+        "raw_trace_sha256": "6bd7441c22d462827c078a4c5031f54a612c67e8ab7b4596886bca9fb1d59cd7"
+      },
+      {
+        "language": "ko",
+        "status": "complete",
+        "dll_load_events": 337,
+        "unique_dll_names": 290,
+        "target_loads": 0,
+        "unresolved_images": 0,
+        "exit_codes": [
+          0,
+          0
+        ],
+        "process_images": [
+          "CalcLens.exe",
+          "pythonw.exe"
+        ],
+        "raw_trace_sha256": "066f02cc35e2317003fa4a547768877058794ed45554bbcf089648acb156546a"
+      }
+    ],
+    "targets": [
+      {
+        "path": "Qt6Lottie.dll",
+        "sha256": "afed59f985b2d1e052e0e2c9863cbfdfe2da596be1ec766c65b0e1344c4d2d1d"
+      },
+      {
+        "path": "Qt6LottieVectorImageGenerator.dll",
+        "sha256": "5061ab7f00f4be095469ac350e12ff6e4372f23c5bc2809d84e686ba62fbff93"
+      },
+      {
+        "path": "Qt6LottieVectorImageHelpers.dll",
+        "sha256": "39b9036f5ee784b88c4d157f67b694fdac3b69908c03daf80ac3013e4d998b5b"
+      },
+      {
+        "path": "Qt6QuickTimeline.dll",
+        "sha256": "88092345621c98649f803cf9fd13dcdecf75393089818eb91f2f466576ee660f"
+      },
+      {
+        "path": "Qt6QuickTimelineBlendTrees.dll",
+        "sha256": "5ccdcf37655273f7e9b0f358c712073b2be2c8b3379c95c305e0db422028b40c"
+      },
+      {
+        "path": "Qt6QmlCompiler.dll",
+        "sha256": "a6210151100a13d7f535912f13a92add812be7f3832e1a96b1971dc45fc8d8f0"
+      },
+      {
+        "path": "plugins/vectorimageformats/qlottievectorimage.dll",
+        "sha256": "d0b360d746e0d75f007c29b62939124e2eeb67abb1b43731f313fe881fa63199"
+      },
+      {
+        "path": "qml/QtQuick/Timeline/qtquicktimelineplugin.dll",
+        "sha256": "770238ea72b59171af09377ce2d2745b8bc3a1c4896ed2b9059fb78657508799"
+      },
+      {
+        "path": "qml/QtQuick/Timeline/BlendTrees/qtquicktimelineblendtreesplugin.dll",
+        "sha256": "c5fb4de419282bbb8f1809d56f4581e4762ee4af033f770162b2d2a4bba8ff76"
+      }
+    ],
+    "positive_control": {
+      "all_targets_observed": true,
+      "transient_unloads_observed": true,
+      "not_application_usage": true
+    },
+    "original_payload_files_checked": 9053,
+    "original_payload_unchanged": true,
+    "full_trace_artifact_sha256": "356ba43242bc6d7b2783ab51a837bee25a1de8f94f09ccb736815d9bdb79b69f"
+  },
+  "interpretation": "The target Qt files were not loaded in the tested app workflows. Deliberate control loads are separate from application usage. Source archives retain their preparation-time notices;this review records the subsequent checks.",
+  "source_links": [
+    "https://doc.qt.io/qt-6/gpl.html",
+    "https://doc.qt.io/qt-6/lgpl.html",
+    "https://github.com/a123qsd/calclens-showcase/releases/download/v0.13.1/CalcLens-0.13.1-Qt-Cocoa-source.zip"
+  ]
+}
