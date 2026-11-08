@@ -10,6 +10,8 @@ assets/gaussian.webp
 assets/structure.webp
 assets/integrated-preview.jpg
 assets/molecule-drawing-0.13.2.webp
+assets/molecule-drawing-0.14.0.webp
+assets/periodic-table-0.14.0.webp
 en.html
 index.html
 licenses-en.html

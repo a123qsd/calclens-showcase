@@ -1,5 +1,5 @@
 CalcLens Free Internal Use License, version 2.0
-For CalcLens 0.13.1 and 0.13.2
+For CalcLens 0.13.1, 0.13.2 and 0.14.0
 
 Copyright (c) 2026 a123qsd
 
@@ -11,7 +11,7 @@ attribution notices continue to apply to their respective material.
 
 This license concerns the original CalcLens application code, documentation,
 and examples that a copyright holder or authorized licensor expressly makes
-available under this license in CalcLens 0.13.1 or 0.13.2 ("Covered Material"). It
+available under this license in CalcLens 0.13.1, 0.13.2 or 0.14.0 ("Covered Material"). It
 applies only to rights that the person granting this license has authority to
 license. Third-party material is governed as described in section 5.
 
@@ -21,7 +21,7 @@ License, version 1.0 ("version 1.0"), another agreement, a third-party
 license, or applicable law. This includes rights granted under version 1.0
 in material previously released under that license and in modifications of
 that material, to the extent covered by that license. Those rights remain
-even if the earlier material also appears unchanged in CalcLens 0.13.1 or 0.13.2.
+even if the earlier material also appears unchanged in CalcLens 0.13.1, 0.13.2 or 0.14.0.
 Version 1.0 does not automatically grant rights in material for which no
 permission was previously granted. The complete version 1.0 license and its
 existing copyright notice are included in LICENSE-v1-legacy.txt.
@@ -69,7 +69,7 @@ rights. A paid service is addressed in section 4.
 
 You may redistribute an Official Package at no charge. An "Official Package"
 is an executable installer, application archive, or other object-code package
-for CalcLens 0.13.1 or 0.13.2 that a licensor has expressly published as an official
+for CalcLens 0.13.1, 0.13.2 or 0.14.0 that a licensor has expressly published as an official
 application package under this license. Its contents and the package file
 must be unchanged from the official package you received. You must preserve
 any accompanying licenses, copyright notices, third-party notices, and other
