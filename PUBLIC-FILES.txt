@@ -16,6 +16,8 @@ assets/auto-recommend-0.15.0.png
 assets/interchange-0.16.0.png
 assets/checkpoint-tools-0.16.0.png
 assets/open-files-0.16.0.png
+assets/gaussian-jobs-0.17.0.png
+assets/gaussian-orbitals-0.17.0.png
 en.html
 index.html
 licenses-en.html
