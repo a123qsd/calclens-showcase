@@ -25,3 +25,10 @@ licenses-en.html
 licenses.html
 site.css
 qt-review-2026-11-08.json
+guide.html
+guide-en.html
+history.html
+history-en.html
+site.js
+assets/calclens-macos-1.2.0.png
+assets/calclens-macos-1.2.0-en.png

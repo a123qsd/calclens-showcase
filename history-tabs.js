@@ -10,25 +10,38 @@
   const localeLinks = Array.from(document.querySelectorAll(".locale a"));
   const localeTargets = new Map(localeLinks.map((link) => [link, link.getAttribute("href")]));
 
-  function panelFromHash() {
-    let id;
+  function targetFromHash() {
     try {
-      id = decodeURIComponent(window.location.hash.slice(1));
+      return document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
     } catch {
       return null;
     }
-    const target = document.getElementById(id);
+  }
+
+  function panelFromHash() {
+    const target = targetFromHash();
     const panel = target?.closest("[data-history-panel]");
     if (panel && panels.includes(panel)) return panel;
-    const tab = tabs.find((item) => item.id === id);
-    return tab ? document.getElementById(tab.getAttribute("aria-controls")) : null;
+    return tabs.includes(target) ? document.getElementById(target.getAttribute("aria-controls")) : null;
   }
 
   function updateLocaleLinks() {
-    const fragment = panelFromHash() ? window.location.hash : "";
+    const fragment = targetFromHash() ? window.location.hash : "";
     localeLinks.forEach((link) => {
       link.setAttribute("href", localeTargets.get(link) + fragment);
     });
+  }
+
+  function revealHashTarget() {
+    const target = targetFromHash();
+    if (!target) return;
+    let parent = target.parentElement;
+    while (parent) {
+      if (parent.tagName === "DETAILS") parent.open = true;
+      parent = parent.parentElement;
+    }
+    // A deep link can belong to a panel that was hidden before activation.
+    requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
   }
 
   function activate(tab, { focus = false, updateHash = false } = {}) {
@@ -65,13 +78,15 @@
   function followHash() {
     const panel = panelFromHash();
     if (panel) activate(tabs.find((tab) => tab.getAttribute("aria-controls") === panel.id));
-    else if (window.location.hash === "#history") activate(tabs[0]);
+    else if (!window.location.hash || window.location.hash === "#history") activate(tabs[0]);
     updateLocaleLinks();
+    revealHashTarget();
   }
 
   const initialPanel = panelFromHash();
   activate(initialPanel ? tabs.find((tab) => tab.getAttribute("aria-controls") === initialPanel.id) : tabs[0]);
   tabList.hidden = false;
+  revealHashTarget();
   window.addEventListener("hashchange", followHash);
   window.addEventListener("popstate", followHash);
 })();
