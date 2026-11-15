@@ -19,6 +19,7 @@ assets/open-files-0.16.0.png
 assets/gaussian-jobs-0.17.0.png
 assets/gaussian-orbitals-0.17.0.png
 en.html
+history-tabs.js
 index.html
 licenses-en.html
 licenses.html
