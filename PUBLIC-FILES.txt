@@ -32,3 +32,5 @@ history-en.html
 site.js
 assets/calclens-macos-1.2.0.png
 assets/calclens-macos-1.2.0-en.png
+assets/calclens-macos-1.2.1.png
+assets/calclens-macos-1.2.1-en.png

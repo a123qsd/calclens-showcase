@@ -1,10 +1,15 @@
 # CalcLens Showcase
 
+macOS 1.2.1 reorganizes the workbench with compact top toolbars, a wide structure viewer and a selection-focused inspector. It adds a bottom Problems tab and integrated local/server file browsing, with updates to structure display and workspace refresh handling. The bilingual site uses actual screenshots from this release. Windows remains at 0.17.1, with its existing downloads and engine differences preserved. The application development repository remains private.
+
+[Mac 1.2.1 release](https://github.com/a123qsd/calclens-showcase/releases/tag/v1.2.1) · [DMG](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.1/CalcLens-1.2.1-macOS-Apple-Silicon.dmg) · [Verification](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.1/release-verification.json) · [SHA-256](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.1/SHA256SUMS.txt) · [Qt Cocoa corresponding source](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.1/CalcLens-1.2.1-Qt-Cocoa-source.zip)
+
+Earlier release records follow.
+
 The macOS 1.2.0 workbench improves direct manipulation, viewport updates and persistent inspector state. The bilingual site shows the actual updated app and separates the concise product page from the detailed [guide](https://a123qsd.github.io/calclens-showcase/guide-en.html) and [full history](https://a123qsd.github.io/calclens-showcase/history-en.html). Windows remains at 0.17.1.
 
 [Mac 1.2.0 release](https://github.com/a123qsd/calclens-showcase/releases/tag/v1.2.0) · [DMG](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.0/CalcLens-1.2.0-macOS-Apple-Silicon.dmg) · [Verification](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.0/release-verification.json) · [SHA-256](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.0/SHA256SUMS.txt) · [Qt Cocoa corresponding source](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.0/CalcLens-1.2.0-Qt-Cocoa-source.zip)
 
-Earlier release records follow.
 
 CalcLens is a desktop workbench for inspecting crystals, molecular structures and calculation results. This repository contains the bilingual portfolio, screenshots and application licenses, including the 0.13.1, 0.13.2, 0.14.0, 0.15.0, 0.15.1, 0.16.0, 0.17.0, 0.17.1, 1.0.0, 1.1.0, 1.1.1, 1.1.2, 1.1.3 and 1.1.4 terms and the preserved version 1.0 terms. Download Apple Silicon macOS 1.1.4 or Windows x64 0.17.1 from Releases. Windows installer and ZIP assets use the separate v0.17.1-windows.1 release; its build manifest identifies the exact private application source commit. The application development repository is private.
 
