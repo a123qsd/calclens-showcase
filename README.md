@@ -2,7 +2,7 @@
 
 macOS 1.3.0 refines console resizing, connection states, file navigation and Gaussian result access. A 7 px divider and Maximize/Restore/Hide controls retain the existing console, camera and SSH session. A single file-location selector replaces competing source tabs; Fit atoms and Fit cell show the current fitting target. Gaussian results open from the explicit action or Command+Shift+G, with summaries from the selected parsed job and expandable source excerpts. Windows remains at 0.17.1, and the application development repository remains private.
 
-The bilingual site uses unchanged native Cocoa captures of the final 1.3.0 validation source: a Korean atom-fit workspace, an English whole-cell workspace and an explicitly labeled Gaussian parser fixture with its selected-job source excerpt.
+The bilingual site uses unchanged native Cocoa captures of the final 1.3.0 validation source: a Korean atom-fit workspace, an English whole-cell workspace and an explicitly labeled Korean Gaussian parser fixture with its selected-job source excerpt.
 
 The connection lobby distinguishes a selected server, a checked login and an active shell. The remote terminal has no local-shell fallback; Tab leaves it normally while disconnected. Gaussian summaries preserve reported values and missing-data states. These interface changes do not claim a calculation-engine or FPS improvement. The app retains ad-hoc signing and is not Apple-notarized. Completed package checks and hashes belong to the release verification record.
 
