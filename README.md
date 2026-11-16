@@ -1,10 +1,15 @@
 # CalcLens Showcase
 
+macOS 1.2.2 opens atomic geometry from FCHK and Cube directly in the editor or from the analysis view. The editor document excludes FCHK wavefunction and orbital data and Cube volume data. The reported blank viewport did not reproduce with the available samples, and its cause remains unverified. Terminal panel transitions are adjusted to reduce repeated rendering. When drawing periodic structures, the working-plane rectangle and auxiliary origin axes are hidden to distinguish them from the lattice. Panel and button motion follows the app and macOS reduce-motion settings. Windows remains at 0.17.1, and the development repository remains private.
+
+[Mac 1.2.2 release](https://github.com/a123qsd/calclens-showcase/releases/tag/v1.2.2) · [DMG](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.2/CalcLens-1.2.2-macOS-Apple-Silicon.dmg) · [Verification](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.2/release-verification.json) · [SHA-256](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.2/SHA256SUMS.txt) · [Qt Cocoa corresponding source](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.2/CalcLens-1.2.2-Qt-Cocoa-source.zip)
+
+Earlier release records follow.
+
 macOS 1.2.1 reorganizes the workbench with compact top toolbars, a wide structure viewer and a selection-focused inspector. It adds a bottom Problems tab and integrated local/server file browsing, with updates to structure display and workspace refresh handling. The bilingual site uses actual screenshots from this release. Windows remains at 0.17.1, with its existing downloads and engine differences preserved. The application development repository remains private.
 
 [Mac 1.2.1 release](https://github.com/a123qsd/calclens-showcase/releases/tag/v1.2.1) · [DMG](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.1/CalcLens-1.2.1-macOS-Apple-Silicon.dmg) · [Verification](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.1/release-verification.json) · [SHA-256](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.1/SHA256SUMS.txt) · [Qt Cocoa corresponding source](https://github.com/a123qsd/calclens-showcase/releases/download/v1.2.1/CalcLens-1.2.1-Qt-Cocoa-source.zip)
 
-Earlier release records follow.
 
 The macOS 1.2.0 workbench improves direct manipulation, viewport updates and persistent inspector state. The bilingual site shows the actual updated app and separates the concise product page from the detailed [guide](https://a123qsd.github.io/calclens-showcase/guide-en.html) and [full history](https://a123qsd.github.io/calclens-showcase/history-en.html). Windows remains at 0.17.1.
 
