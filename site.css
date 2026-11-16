@@ -345,3 +345,15 @@ svg { flex: none; }
 @media (max-width: 640px) {
   .nav { flex-wrap: wrap; column-gap: 16px; }
 }
+
+/* Native viewport comparison in the 1.2.3 guide. */
+.viewport-comparison { gap: 28px; }
+.viewport-comparison h3 { font-size: 1.1rem; }
+.viewport-comparison .shot img { height: auto; }
+.viewport-notes { margin-top: 25px; }
+.viewport-notes > h3 { font-size: 1.2rem; }
+.viewport-notes > ul { margin-top: 15px; padding-left: 1.2em; color: var(--muted); font-size: .95rem; }
+.viewport-notes li + li { margin-top: 9px; }
+.verification-notes { margin-top: 25px; padding: 16px 18px; border: 1px solid var(--line); border-radius: 4px; }
+.verification-notes summary { cursor: pointer; font-weight: 600; }
+.verification-notes p { margin-top: 13px; color: var(--muted); font-size: .9rem; }

@@ -34,3 +34,6 @@ assets/calclens-macos-1.2.0.png
 assets/calclens-macos-1.2.0-en.png
 assets/calclens-macos-1.2.1.png
 assets/calclens-macos-1.2.1-en.png
+assets/calclens-macos-1.2.3.png
+assets/calclens-viewport-1.2.3-before.png
+assets/calclens-viewport-1.2.3-after.png
